@@ -385,7 +385,8 @@ form label {
 .criminal-record{grid-area: crecord;}
 .record-doc{grid-area: record-doc; align-self: center;}
 .favorite-weapon{grid-area: favorite-weapon; align-self: center;}
-.id-card{grid-area: id-card; align-self: center;}
+.id-card{grid-area: id-card; align-self: center;  }
+.arrows{grid-area:arrows;}
 
 
 
@@ -421,12 +422,23 @@ form label {
   ;
 }
 
+.arrows{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrows .address {
+margin: 10px;
+}
+
 #section2 .fighter-application {
   grid-template-areas: 
 
   "title full-name crecord crecord"
   "title favorite-weapon record-doc id-card"  
-  "button button button button"
+  "arrows arrows arrows arrows  "
   
   ;
 }
@@ -455,7 +467,7 @@ textarea {
 
 
 #fighter-app-body {
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .small-button {
@@ -464,12 +476,12 @@ textarea {
   align-self: self-end;
 }
 
-.fighter-application .button {
+.fighter-application a {
   background-color: var(--darker-gray);
   color: white;
 }
 
-.fighter-application .button:hover {
+.fighter-application a:hover {
   background-color: white;
   color: var(--dark-gray) !important;
   font-weight: bolder;
@@ -485,11 +497,208 @@ textarea {
   justify-self: center;
 }
 
-.fighter-application h1 {
+#section1 .fighter-application h1, #section2 .fighter-application h1 {
   justify-self: center;
   align-self: center;
   font-size: 4rem;
 }
+
+
+.skill {
+  background-color: var(--darker-gray);
+  transition: 0.5s ease-in-out;
+  border-radius: 5px;
+  width: 300px;
+  height: 50px;
+  overflow: hidden;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cairo", sans-serif;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.skill h3 {
+  transform: translateY(8px);
+}
+
+.skills {
+  grid-area: skills;
+}
+
+#section3 .fighter-application {
+  grid-template-areas: 
+    "title title title"
+    "skills skills skills "
+    "arrows arrows arrows"
+  ;
+}
+
+.arrows .button {margin: 20px;}
+
+
+
+.skill:hover {
+  background-color: white;
+  color: var(--dark-gray)
+}
+
+.skill input[name="skill"]{
+  transform: scale(100);
+  opacity: 0;
+}
+
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: start; 
+  flex-wrap: wrap;
+  }
+
+.skills {
+  gap: 60px;
+}
+
+#section4 .button {
+  width: 300px !important;
+  height: 50px !important;
+  padding: 10px;
+}
+
+#section4 a {
+  width: 300px !important;
+  height: 50px !important;
+  padding: 10px;
+}
+.buttons{grid-area: buttons;}
+
+#section4 .fighter-application {
+  grid-template-areas: 
+    "title title title"
+    "skills skills skills "
+    "buttons buttons buttons"
+  ;
+}
+
+
+/* Fighter Profile */
+
+.profile-info { grid-area: profile; }
+.profile-pic { grid-area: pic; }
+.profile-name { grid-area: name; }
+.profile-stats { grid-area: stats; }
+.new-orders { grid-area: new; }
+.prev-orders { grid-area: prev; }
+.orders {grid-area: orders;}
+
+
+.fighter-profile {
+  direction: rtl;
+  grid-template-areas: 
+    "profile stats stats"
+    "profile orders orders"
+  ;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr;
+}
+
+
+.profile-info {
+  background-color: var(--red);
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 20px;
+  margin: 10px;
+  margin-top: 40px;
+
+}
+
+.profile-pic {
+  background-image: url(../images/upload.webp);
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: #FFF solid 1px  ;
+  margin: 1%;
+  margin-top: 70px;
+
+}
+
+.profile-name {
+  color: white;
+  font-size: 3rem;
+}
+
+
+.profile-username {
+  direction: ltr  ;
+  color: var(--darker-gray);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.profile-links a {
+  background-color: var(--darker-red);
+  color: white;
+  text-decoration: none;
+  font-family: "Cairo", sans-serif;
+  font-weight: bold;
+  width: 250px;
+  height: 50px;
+  transition: 0.5s ease-in-out;
+  border-radius: 10px;
+  transform: translateY(20px);
+}
+
+.profile-links a:hover {
+  background-color: white;
+  color: black;
+}
+
+.profile-stats {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 30px;
+  padding-top: 50px;
+} 
+
+.stat {
+  background-color:  rgb(222, 222, 222);
+  color: black;
+  font-size: 1rem;
+  font-family: "Cairo", sans-serif;
+  font-weight: bold;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.stat i {
+  font-size: 3rem;
+}
+
+
 
 
 
@@ -714,4 +923,5 @@ textarea {
     transform: translateY(-2000px);
   }
 }
+
 
