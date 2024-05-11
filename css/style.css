@@ -468,7 +468,7 @@ textarea {
 
 
 #fighter-app-body {
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .small-button {
@@ -581,6 +581,25 @@ textarea {
     "skills skills skills "
     "buttons buttons buttons"
   ;
+}
+
+#section4 .skills {
+  gap: 10px ;
+}
+
+#section4 .skills img {
+  width: 100px;
+}
+
+.weapon {
+  margin: 0 !important;
+  height: 200px !important;
+  width: 200px !important;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 
