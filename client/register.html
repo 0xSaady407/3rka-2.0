@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https//fonts.googleapis.com">
+    <link rel="preconnect" href="https//fonts.gstatic.com" crossorigin>
+    <link href="https//fonts.googleapis.com/css2?family=Cairowght@200..1000&family=Rakkas&display=swap" rel="stylesheet">
+</head>
+
+<body class="background">
+
+    <div class="nav cairo-font">
+        <div class="nav-left">
+            <ul>
+                <li><img src="../images/3rka-logo-cut.png" alt="3rka Logo"></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="login.html">تسجيل الدخول</a>
+            <li><a href="index.html">من نحن</a></li>
+        </div>
+    </div>
+
+    <div class="registration-form cairo-font">
+        
+        <form class="grid-container" id="registration-form">
+            <h2 class="registration-title rakkas">عميل جديد</h2>
+            <div class="form-group full-name">
+                <label for="name" class="label-name">الاسم كامل</label>
+                <input type="text" id="name" class="input-name" required>
+            </div>
+            <div class="form-group username">
+                <label for="username" class="label-username">اسم المستخدم</label>
+                <input type="text" id="username" class="input-username" required>
+            </div>
+            <div class="form-group email">
+                <label for="email" class="label-email">البريد الإلكتروني</label>
+                <input type="email" id="email" class="input-email" required>
+            </div>
+            <div class="form-group password">
+                <label for="password" class="label-password">كلمة السر</label>
+                <input type="password" id="password" class="input-password" required></div>
+            <div class="form-group confirm-password">
+                <label for="confirm-password" class="label-password">تأكيد كلمة السر </label>
+                <input type="password" id="confirm-password" class="input-confirm-password" required>
+            </div>
+            <div class="form-group phone-number">
+                <label for="phone-number" class="label-phone-number">رقم الهاتف</label>
+                <input type="tel" id="phone-number" class="input-phone-number" required>
+            </div>
+            <div class="form-group guide-officer">
+                <label for="checkbox1" class="label-checkbox">هل انت مرشد أو ظابط؟</label>
+                <input type="checkbox" id="checkbox1" class="input-checkbox">
+            </div>
+            <div class="form-group oath">
+                <label for="checkbox2" class="label-checkbox">والله؟</label>
+                <input type="checkbox" id="checkbox2" class="input-checkbox">
+            </div>
+            
+            <div class="client-image">
+                <div class="client-image-border">
+                    <input type="file" name="client-image">
+                </div>
+            </div>
+            
+            <button type="submit" class="button">تمام!</button>
+            
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https//fonts.googleapis.com">
+    <link rel="preconnect" href="https//fonts.gstatic.com" crossorigin>
+    <link href="https//fonts.googleapis.com/css2?family=Cairowght@200..1000&family=Rakkas&display=swap" rel="stylesheet">
+</head>
+
+<body   class="dark-background" id="fighter-app-body">
+
+    <div class="nav cairo-font">
+        <div class="nav-left">
+            <ul>
+                <li><img src="../images/3rka-logo-cut.png" alt="3rka Logo"></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="login.html">تسجيل الدخول</a>
+            <li><a href="index.html">من نحن</a></li>
+        </div>
+    </div>
+
+    <div class="section" id="section1">
+        <form class="grid-container fighter-application fighter-section" method="post">
+            <h1 class="registration-title">بيانات شخصية</h1>
+            <div class="form-group full-name">
+                <label for="name">الاسم</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group username">
+                <label for="username">اسم المستخدم</label>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <div class="form-group password">
+                <label for="password">كلمة المرور</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-group confirm-password">
+                <label for="confirm-password">تأكيد كلمة المرور</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+            </div>
+
+            <div class="form-group date-of-birth">
+                <label for="date-of-birth">تاريخ الميلاد</label>
+                <input type="date" id="date-of-birth" name="date-of-birth">
+            </div>
+
+            <div class="form-group email">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group address">
+                <label for="address">العنوان</label>
+                <input type="text" id="address" name="address">
+            </div>
+
+            <div class="form-group phone-number">
+                <label for="phone-number">رقم الهاتف</label>
+                <input type="tel" id="phone-number" name="phone-number">
+            </div>
+
+            <div class="client-image">
+                <div class="client-image-border">
+                    <input type="file" name="client-image">
+                </div>
+            </div>
+
+            
+            <a href="#section2" class="button small-button" style="text-decoration: none;">اللي بعده!</a>
+
+        </form>
+
+    </div>
+    <div class="section" id="section2">
+        <form class="grid-container fighter-application fighter-section" method="post">
+
+            <h1 class="registration-title">بيانات اجرامية</h1>
+            <div class="form-group full-name">
+                <label for="fame-name">اسم الشهرة</label>
+                <input type="text" id="fame-name" name="fame-name">
+            </div>
+
+            <div class="form-group criminal-record">
+                <label for="criminal-record">سجلك الإجرامي باختصار</label>
+                <textarea name="criminal-record" id="criminal-record"></textarea>
+            </div>
+
+            <div class="record-doc form-group">
+                    <label for="record-doc">صورة الفيش والتشبيه</label>
+                    <input type="file" name="record-doc">
+            </div>
+
+            <div class="id-card form-group">
+                <label for="id-card">صورة البطاقة</label>
+                <input type="file" name="id-card">
+            </div>
+
+            <div class="form-group favorite-weapon">
+                <label for="favorite-weapon">سلاحك المفضل</label>
+                <select id="favorite-weapon" name="favorite-weapon">
+                    <option value="sword">سيف</option>
+                    <option value="axe">فأس</option>
+                    <option value="bow">قوس</option>
+                    <option value="dagger">خنجر</option>
+                </select>
+            </div>
+
+            
+            <a href="#section3" class="button small-button" style="text-decoration: none;">اللي بعده!</a>
+
+        </form>
+    </div>
+    <div class="section" id="section3">
+        <div class="grid-container">
+            <h1>التقديم كبلطجي</h1>
+        </div>
+    </div>
+    <div class="section" id="section1">
+        <div class="grid-container">
+            <h1>التقديم كبلطجي</h1>
+        </div>
+    </div>
+
+</body>
