@@ -439,7 +439,7 @@ margin: 10px;
 
   "title full-name crecord crecord"
   "title favorite-weapon record-doc id-card"  
-  "arrows arrows arrows arrows  "
+  "arrows arrows arrows arrows"
   
   ;
 }
@@ -468,7 +468,7 @@ textarea {
 
 
 #fighter-app-body {
-  overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .small-button {
