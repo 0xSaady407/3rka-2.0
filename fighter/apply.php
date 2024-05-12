@@ -47,9 +47,13 @@
         if(!$address) $error[address]= "العنوان مينفعش يبقى فاضي، دخل عنوان صحيح";
 
         $Main_Weapon=cleanInput($_POST['favorite-weapon']);
+        
+        $details=cleanInput($_POST['criminal-record']);
+        if(empty($details)) $error[details] = "دخل تفاصيل الخناقة، لو مفيش اكتب لا يوجد";
         $img_path="";
         $card_path="";
         $fesh_path="";
+
         if(isset($_FILES['record-doc'])){
             $img_name=$_FILES['record-doc']['name'];
             $img_size=$_FILES['record-doc']['size'];
@@ -67,6 +71,7 @@
                 $fesh_path=$target_file;
             }
         }
+        
         if(isset($_FILES['id-card'])){
             $img_name=$_FILES['id-card']['name'];
             $img_size=$_FILES['id-card']['size'];
@@ -84,6 +89,7 @@
                 $card_path=$target_file;
             }
         }
+        
         if(isset($_FILES['client-image'])){
             $img_name=$_FILES['client-image']['name'];
             $img_size=$_FILES['client-image']['size'];
@@ -103,7 +109,7 @@
         }
 
         if(empty($error)){
-            $sql="INSERT INTO `fighters` (`Fname`, `username`, `nick_name`, `password`, `phone_no`,`email`, `birth_date`, `address`, `Main_Weapon`,`img_path`,`fesh_path`,`card_path`) VALUES ('$Fname', '$username', '$nickname', '$password', '$phone_no', '$email', '$birth_date', '$address', '$Main_Weapon','$img_path','$fesh_path','$card_path')";
+            $sql="INSERT INTO `fighters` (`Fname`, `username`, `nick_name`, `password`, `phone_no`,`email`, `birth_date`, `address`, `Main_Weapon`,`img_path`,`fesh_path`,`card_path`,`details`) VALUES ('$Fname', '$username', '$nickname', '$password', '$phone_no', '$email', '$birth_date', '$address', '$Main_Weapon','$img_path','$fesh_path','$card_path','$details')";
             if(mysqli_query($mysqli,$sql)){
                 echo "<script> alert(\"data inserted successfully\")</script>";
             }
@@ -241,6 +247,9 @@
             <div class="form-group criminal-record">
                 <label for="criminal-record">سجلك الإجرامي باختصار</label>
                 <textarea name="criminal-record" id="criminal-record"></textarea>
+                <span class="error"> 
+                    <?php echo $error[details] ?>
+                </span>
             </div>
 
             <div class="record-doc form-group">
