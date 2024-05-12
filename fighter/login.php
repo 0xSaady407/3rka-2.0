@@ -4,14 +4,15 @@
     require "../functions.php";
 
     if(isset($_SESSION['user'])){
-        if($_SESSION['role'] != "client" && $_SESSION['role'] != "admin"){
-            header("Location: ../fighter/profile.php");
+        if($_SESSION['role'] != "fighter" && $_SESSION['role'] != "admin"){
+            header("Location: ../client/profile.php");
             exit();
         } else {
             header("Location: profile.php");
             exit();
         }
     }
+
     if(isset($_POST['username']) && isset($_POST['password'])){
         $error = array(
             "username" => "",
@@ -23,12 +24,11 @@
 
         $password = $_POST['password'];
         $password = cleanInput($password);
-
         if(empty($password)) $error['password'] = "دخل كلمة مرور صحيحة";
         else $password = md5($password);
 
         if ($error == ["username" => "", "password" => ""]) {
-            $query = $mysqli->prepare("SELECT * FROM clients WHERE password = ? AND (username = ? OR email = ?)");
+            $query = $mysqli->prepare("SELECT * FROM fighters WHERE password = ? AND (username = ? OR email = ?) AND confirmed = 1");
             $query->bind_param("sss", $password, $username, $username);
             
             if ($query->execute()) {
@@ -40,7 +40,7 @@
                 } else {
                     $row = $result->fetch_assoc();
                     $_SESSION['user'] = $username;
-                    $_SESSION['role'] = "client";
+                    $_SESSION['role'] = "fighter";
                     header('Location: profile.php');
                     exit();
                 }
@@ -61,7 +61,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Rakkas&display=swap" rel="stylesheet">
 </head>
-<body id="client-login-body" class="cairo-font">
+<body id="login-body" class="cairo-font">
 
     <div class="nav cairo-font  ">
         <div class="nav-left">
@@ -84,14 +84,18 @@
                         <label for="username">اسم المستخدم أو الإيميل</label>
                         <input type="text" name="username" id="username" required>
                         <span class="error">
-                            <?php echo $error['username'];?>
+                            <?php
+                                echo $error['username'];
+                            ?>
                         </span>
                     </div>
                     <div class="label-input-group">
                         <label for="password">كلمة السر</label>
                         <input type="password" name="password" id="password" required>
                         <span class="error">
-                            <?php echo $error['password'];?>
+                            <?php
+                                echo $error['password'];
+                            ?>
                         </span>
                     </div>
 

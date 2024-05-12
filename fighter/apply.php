@@ -4,7 +4,10 @@
         
     if($_POST['submit']){
         $error=array();
-
+        $skills = $_POST['skill'];
+        if(empty($skills)) $error[skills] = "اختر مهارة واحدة على الأقل";
+        print_r($skiils);
+        
         $Fname=cleanInput($_POST['name']);
         if(!$Fname) $error[Fname] = "دخل اسمك";
         else {
@@ -108,8 +111,14 @@
             }
         }
 
+        
+
         if(empty($error)){
             $sql="INSERT INTO `fighters` (`Fname`, `username`, `nick_name`, `password`, `phone_no`,`email`, `birth_date`, `address`, `Main_Weapon`,`img_path`,`fesh_path`,`card_path`,`details`) VALUES ('$Fname', '$username', '$nickname', '$password', '$phone_no', '$email', '$birth_date', '$address', '$Main_Weapon','$img_path','$fesh_path','$card_path','$details')";
+            foreach($skill as $skills){
+                $sql="INSERT INTO `fighter_skills` (`Fusername`, `skill`) VALUES ('$username', $skill')";
+                mysqli_query($mysqli, $sql);
+            }
             if(mysqli_query($mysqli,$sql)){
                 header("Location: login.php");
                 exit();
@@ -290,44 +299,44 @@
 
                 <div class="skill">
                     <h3>قوة الجسم</h3>
-                    <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
+                    <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
                 </div>
 
                     <div class="skill">
                         <h3>تعوير</h3>
-                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
                     </div>
 
                     <div class="skill">
                         <h3>مدى بعيد</h3>
-                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
                     </div>
 
                     <div class="skill">
                         <h3>مدى قصير</h3>
-                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
                     </div>
 
                     <div class="skill">
                         <h3>سرعة</h3>
-                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
                     </div>
 
                     <div class="skill">
                         <h3>فورمة</h3>
-                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
                     </div>
                     <div class="skill">
                         <h3>الإقناع</h3>
-                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
                     </div>
                     <div class="skill">
                         <h3>الهروب</h3>
-                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
                     </div>
                     <div class="skill">
                         <h3>عصب</h3>
-                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
                     </div>
                     
                     <div class="arrows">
