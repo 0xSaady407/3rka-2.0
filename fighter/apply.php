@@ -111,14 +111,13 @@
         if(empty($error)){
             $sql="INSERT INTO `fighters` (`Fname`, `username`, `nick_name`, `password`, `phone_no`,`email`, `birth_date`, `address`, `Main_Weapon`,`img_path`,`fesh_path`,`card_path`,`details`) VALUES ('$Fname', '$username', '$nickname', '$password', '$phone_no', '$email', '$birth_date', '$address', '$Main_Weapon','$img_path','$fesh_path','$card_path','$details')";
             if(mysqli_query($mysqli,$sql)){
-                echo "<script> alert(\"data inserted successfully\")</script>";
+                header("Location: login.php");
+                exit();
             }
             else{
-                echo "<script> alert(\"not inserted\")</script>";
+                header("Location: ../error.php");
+                exit();
             }
-        }
-        else{
-            echo "<script> alert(\"error\")</script>";
         }
     }
 
