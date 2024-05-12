@@ -12,6 +12,20 @@ function checkboxChangeColor() {
     }
 }
 
+function cardColor(){
+document.querySelectorAll('.card').forEach(card => {
+    const checkbox = card.querySelector('input[type="checkbox"]');
+    checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+            card.style.backgroundColor = "var(--red)";
+            card.querySelector('p').style.color = "white";
+        } else {
+            card.style.backgroundColor = "var(--darker-gray)";
+            card.querySelector('p').style.color = "rgb(103, 103, 103)";
+        }
+    });
+});}
+
 
 function convertToIndicNumbers(className) {
     const elements = document.querySelectorAll(`.${className}`);
