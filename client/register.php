@@ -16,7 +16,6 @@
             if(mysqli_num_rows($result) > 0) $error[username] = "اسم المستخدم مستخدم بالفعل";
         }
         if(!$username) $error[username] = "دخل اسم المستخدم";
-        else if(!preg_match("/^[\p{Arabic} ]+$/u", $username)) $error[username] = "الاسم لازم يكون حروف عربي فقط";
 
         $password=cleanInput($_POST['password']);
         $cpassword=cleanInput($_POST['confirm-password']);

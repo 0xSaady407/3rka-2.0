@@ -95,7 +95,7 @@
                         </span>
                     </div>
 
-                    <h5>لسة مش مسجل؟ اعمل <a href="">حساب جديد</a></h5>
+                    <h5>لسة مش مسجل؟ اعمل <a href="register.php">حساب جديد</a></h5>
                     
 
                     <button type="submit" class="button red-button submit">تأكيد</button>

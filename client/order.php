@@ -17,7 +17,7 @@
             </ul>
         </div>
         <div class="nav-right">
-            <a href="login.html">تسجيل الدخول</a>
+            <a href="../logout.php">تسجيل الخروج</a>
             <li><a href="index.html">من نحن</a></li>
         </div>
     </div>
@@ -28,7 +28,7 @@
             </ul>
         </div>
         <div class="nav-right">
-            <a href="login.html">تسجيل الدخول</a>
+            <a href="../logout.php">تسجيل الخروج</a>
             <li><a href="index.html">من نحن</a></li>
         </div>
     </div>
