@@ -11,10 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
-.rubik-font {
+.rubik-font, h1 {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -1216,5 +1216,4 @@ html {
   background-color: var(--red);
   border-radius: 60px;
 }
-
 
