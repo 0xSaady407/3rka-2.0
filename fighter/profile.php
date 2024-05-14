@@ -46,14 +46,14 @@
             </ul>
         </div>
         <div class="nav-right">
-            <a href="login.html">تسجيل الدخول</a>
+            <a href="../logout.php">تسجيل الخروج</a>
             <li><a href="index.html">من نحن</a></li>
         </div>
     </div>
 
     <div class="grid-container fighter-profile">
         <div class="profile-info">
-            <div class="profile-pic" style="background-image: url(<?php echo $row['lname']; ?>);"></div>
+            <div class="profile-pic" style="background-image: url(<?php echo $row['img_path']; ?>);"></div>
             <div class="profile-name rakkas"><?php echo $row['nick_name']; ?></div>
             <div class="profile-username cairo-font">@<?php echo $username?></div>
 

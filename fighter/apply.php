@@ -16,15 +16,10 @@
         
         $username=cleanInput($_POST['username']);
         if(!$username) $error[username] = "دخل اسم المستخدم";
-        else{
-            if(!preg_match("/^[\p{Arabic} ]+$/u", $username)) $error[username] = "الاسم لازم يكون حروف عربي فقط";
-        }
         
         $nickname=cleanInput($_POST['fame-name']);
         if(!$nickname) $error[nickname] = "دخل اسم الشهرة";
-        else{
-            if(!preg_match("/^[\p{Arabic} ]+$/u", $nickname)) $error[nickname] = "الاسم لازم يكون حروف عربي فقط";
-        }
+        
 
         $password=cleanInput($_POST['password']);
         $cpassword=cleanInput($_POST['confirm-password']);
@@ -299,44 +294,44 @@
 
                 <div class="skill">
                     <h3>قوة الجسم</h3>
-                    <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
+                    <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
                 </div>
 
                     <div class="skill">
                         <h3>تعوير</h3>
-                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
                     </div>
 
                     <div class="skill">
                         <h3>مدى بعيد</h3>
-                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
                     </div>
 
                     <div class="skill">
                         <h3>مدى قصير</h3>
-                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
                     </div>
 
                     <div class="skill">
                         <h3>سرعة</h3>
-                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
                     </div>
 
                     <div class="skill">
                         <h3>فورمة</h3>
-                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
                     </div>
                     <div class="skill">
                         <h3>الإقناع</h3>
-                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
                     </div>
                     <div class="skill">
                         <h3>الهروب</h3>
-                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
                     </div>
                     <div class="skill">
                         <h3>عصب</h3>
-                        <input type="checkbox" name="skill[]" id="skill" onclick="checkboxChangeColor()">
+                        <input type="checkbox" name="skill" id="skill" onclick="checkboxChangeColor()">
                     </div>
                     
                     <div class="arrows">
